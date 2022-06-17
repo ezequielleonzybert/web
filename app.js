@@ -17,9 +17,10 @@ addEventListener("click", (e)=>{
 function transitions(page){
     switch (page) {
         case "yellow":
-            yellow.style.clipPath = "polygon(-100% -5%, 200% -5%, 50% 97.45%)";
+            yellow.style.clipPath =        "polygon(-100% -5%, 200% -5%, 50% 97.45%)";
             yellow_stroke.style.clipPath = "polygon(-100% 0%, 200% 0%, 50% 103.45%)";
-            cyan.style.clipPath = "polygon(-90% 200%, -100% 0, 50% 103.45%)";
+            cyan.style.clipPath =        "polygon(-90% 200%, -100% 0% , 50% 103.45%)";
+            cyan_stroke.style.clipPath = "polygon(-90% 205%, -100% -5%, 60% 103.45%)";
             magenta.style.clipPath = "polygon(-90% 200%, 200% 0, 190% 200%)";
             break;
         case "cyan":
