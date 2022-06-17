@@ -38,20 +38,3 @@ function transitions(page){
     }
 }
 
-
-// function transitionAbout(e) {
-//     if(page != "about"){
-//         page = "about";
-//         about.style.clipPath = "polygon(100% 0, 100% 65%, 50% 120%, 0 65%, 0 0)";
-//         contact.style.clipPath = "polygon(50% 125%, 100% 100%, 100% 70%)";
-//         portfolio.style.clipPath = "polygon(0 70%, 0% 100%, 50% 125%)";
-//     }
-//     else{
-//         page = null;
-//         about.style.clipPath = "polygon(100% 0, 100% 0, 65% 25%, 0 0, 0 0)";
-//         contact.style.clipPath = "polygon(34% 100%, 100% 100%, 100% 68%)";
-//         portfolio.style.clipPath = "polygon(0 55%, 0% 100%, 52% 100%)";
-//     }    
-// }
-
-
