@@ -2,37 +2,41 @@ let polygon = document.getElementsByClassName('polygon');
 let page = null;
 
 window.onload = ()=>{
-    about.style.clipPath = "polygon(-100% -60% , 200% -100%, 65% 30%)";    
-    portfolio.style.clipPath = "polygon(-100% 200%, -100% -90%, 130% 200%)";
-    contact.style.clipPath = " polygon(-100% 150%, 200% 30%, 200% 200%)";
+    yellow.style.clipPath = "polygon(-100% -60% , 200% -100%, 65% 30%)";   
+    yellow_stroke.style.clipPath = "polygon(-100% -60% , 200% -100%, 65% 30%)";  
+    cyan.style.clipPath = "polygon(-100% 190%, -100% -90%, 130% 200%)";
+    magenta.style.clipPath = " polygon(-100% 150%, 200% 30%, 190% 200%)";
 }
 
 addEventListener("click", (e)=>{
-    page = e.target.id;
+    page = e.target.id; console.log(page);
     transitions(page);
 })
 
 function transitions(page){
     switch (page) {
-        case "about":
-            about.style.clipPath = "polygon(-100% 0, 200% 0, 50% 103.44%)";
-            portfolio.style.clipPath = "polygon(-100% 200%, -100% 0, 190% 200%)";
-            contact.style.clipPath = "polygon(-90% 200%, 200% 0, 200% 200%)";
+        case "yellow":
+            yellow.style.clipPath = "polygon(-100% -5%, 200% -5%, 50% 97.45%)";
+            yellow_stroke.style.clipPath = "polygon(-100% 0%, 200% 0%, 50% 103.45%)";
+            cyan.style.clipPath = "polygon(-90% 200%, -100% 0, 50% 103.45%)";
+            magenta.style.clipPath = "polygon(-90% 200%, 200% 0, 190% 200%)";
             break;
-        case "portfolio":
-            about.style.clipPath = "polygon(75% 0, 150% 0,  90% 20%)";
-            contact.style.clipPath = "polygon(" +  a  + ", 1000% 1000%, " + b +")";
-            portfolio.style.clipPath = "polygon(0 -100%, -1000% 1000%,100% 220% , 150% 0, 90% 20%)";
+        case "cyan":
+            yellow.style.clipPath = "polygon(-100% -105%, 200% -105%, 90% 15%)";
+            yellow_stroke.style.clipPath = "polygon(-100% -100%, 200% -100%, 90% 20%)";
+            cyan.style.clipPath = "polygon(-90% 200%, -100% -100%, 200% 0%)";
+            magenta.style.clipPath = "polygon(-90% 200%, 200% 0%, 190% 200%)";
             break;
-        case "contact":
-            about.style.clipPath = "polygon(-100% -100%, 200% -100%,  90% 20%)";
-            portfolio.style.clipPath = "polygon(-100% 200%, -100% 0, 190% 200%)";
-            contact.style.clipPath = "polygon(-100% 10%, 200% -100%, 190% 200%)";
+        case "magenta":
+            yellow.style.clipPath = "polygon(-100% -100%, 200% -100%, 90% 20%)";
+            cyan.style.clipPath = "polygon(-90% 200%, -100% 0%, 50% 103.45%)";
+            magenta.style.clipPath = "polygon(-100% 0%, 200% -100%, 190% 200%)";
             break;
         default:
-            about.style.clipPath = "polygon(-100% -60% , 200% -100%, 65% 30%)";    
-            portfolio.style.clipPath = "polygon(-100% 200%, -100% -90%, 130% 200%)";
-            contact.style.clipPath = " polygon(-100% 150%, 200% 30%, 200% 200%)";
+            yellow.style.clipPath = "polygon(-100% -60% , 200% -100%, 65% 30%)";  
+            yellow_stroke.style.clipPath = "polygon(-100% -60% , 200% -100%, 65% 30%)";  
+            cyan.style.clipPath = "polygon(-100% 200%, -100% -90%, 130% 200%)";
+            magenta.style.clipPath = " polygon(-100% 150%, 200% 30%, 200% 200%)";
             break;
     }
 }
