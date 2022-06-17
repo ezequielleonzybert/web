@@ -31,7 +31,7 @@ function transitions(page){
         case "portfolio":
             about.style.clipPath = "polygon(75% 0, 150% 0,  90% 20%)";
             contact.style.clipPath = "polygon(" +  a  + ", 1000% 1000%, " + b +")";
-            portfolio.style.clipPath = "polygon(0 40%, -1000% 1000%, 200% 280%)";
+            portfolio.style.clipPath = "polygon(0 -100%, -1000% 1000%, 200% 280%)";
             break;
         default:
             about.style.clipPath = "polygon(-200% -100% , 200% -100%, 65% 25%);";
