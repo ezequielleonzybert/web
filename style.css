@@ -8,6 +8,10 @@ body {
     background: black;
 }
 
+#frame {
+    background-color: black;
+}
+
 .polygon {
     position: absolute;
     width: 100vw;
