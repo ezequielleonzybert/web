@@ -93,11 +93,11 @@ function transitions(page){
             scaleTriangle(Ys, 1.01);
             setTrianglePoints(C,  -60, 200, -100, 0, 50, 115.4);
             setTrianglePoints(Cs, -60, 200, -100, 0, 50, 115.4);
-            scaleTriangle(C, .98);
+            scaleTriangle(C, .99);
             scaleTriangle(Cs, 1.01);
             setTrianglePoints(M,  -100, 0, 200, -100, 160, 200);
             setTrianglePoints(Ms, -100, 0, 200, -100, 160, 200);
-            scaleTriangle(M, .98);
+            scaleTriangle(M, .99);
             scaleTriangle(Ms, 1.01);
             break;
     }
