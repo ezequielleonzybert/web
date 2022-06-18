@@ -45,7 +45,6 @@ addEventListener(transitionEnd,()=>{
 }, false);
 
 addEventListener("click", (e)=>{
-    
     if(transition_ended){
         previous_page = page;
         page = e.target.id;
