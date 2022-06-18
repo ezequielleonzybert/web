@@ -20,10 +20,38 @@ addEventListener("resize",(e)=>{
     update();
 })
 
+let transition_ended = true;
+
+function whichTransitionEvent(){
+    var t;
+    var el = document.createElement('fakeelement');
+    var transitions = {
+      'transition':'transitionend',
+      'OTransition':'oTransitionEnd',
+      'MozTransition':'transitionend',
+      'WebkitTransition':'webkitTransitionEnd'
+    }
+
+    for(t in transitions){
+        if( el.style[t] !== undefined ){
+            return transitions[t];
+        }
+    }
+}
+
+var transitionEnd = whichTransitionEvent();
+addEventListener(transitionEnd,()=>{
+    transition_ended = true;
+}, false);
+
 addEventListener("click", (e)=>{
-    previous_page = page;
-    page = e.target.id;
-    transitions(page)
+    
+    if(transition_ended){
+        previous_page = page;
+        page = e.target.id;
+        transition_ended = false;
+        transitions(page);
+    }
 })
 
 function transitions(page){

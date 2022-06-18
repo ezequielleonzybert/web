@@ -17,7 +17,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    transition: clip-path 1.5s;
+    transition: clip-path 1s;
 }
 
 #yellow {
