@@ -17,21 +17,19 @@ body {
 
 #yellow {
     background-color: yellow;
-    
 }
 #yellow_stroke {
     background-color: black;
-    
 }
 #cyan {
     background-color: cyan;
-   
 }
 #cyan_stroke {
     background-color: black;
-   
 }
 #magenta {
     background-color: magenta;
-    
+}
+#magenta_stroke {
+    background-color: black;
 }
