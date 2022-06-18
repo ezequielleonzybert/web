@@ -24,10 +24,10 @@ addEventListener("click", (e)=>{
 function transitions(page){
     switch (page) {
         default:
-            cyan.style.zIndex = 0;
-            cyan_stroke.style.zIndex = 0;
-            magenta.style.zIndex = -1;
-            magenta_stroke.style.zIndex = -1;
+                cyan.style.zIndex = 0;
+                cyan_stroke.style.zIndex = 0;
+                magenta.style.zIndex = -1;
+                magenta_stroke.style.zIndex = -1;      
             
             setTrianglePoints(Y, -100, -60, 200, -100, 65, 30);
             setTrianglePoints(Ys, -100, -60, 200, -100, 65, 30);
@@ -35,25 +35,29 @@ function transitions(page){
             scaleTriangle(Ys, 1.01);
             setTrianglePoints(C, -100, 200, -100, -90, 50.7, 100);
             setTrianglePoints(Cs, -100, 200, -100, -90, 50.7, 100);
-            scaleTriangle(C, .98);
+            scaleTriangle(C, .99);
             scaleTriangle(Cs, 1.01);
             setTrianglePoints(M, 44.5, 92.2, 200, 30, 130, 200);
             setTrianglePoints(Ms, 44.5, 92.2, 200, 30, 130, 200);
-            scaleTriangle(M, .98);
+            scaleTriangle(M, .99);
             scaleTriangle(Ms, 1.01);
             break;
         case "yellow":
+            magenta.style.zIndex = 0;
+            magenta_stroke.style.zIndex = 0;
+            cyan.style.zIndex = -1;
+            cyan_stroke.style.zIndex = -1;
             setTrianglePoints(Y,  -100, 0, 200, 0, 50, 115.4);
             setTrianglePoints(Ys,  -100, 0, 200, 0, 50, 115.4);
             scaleTriangle(Y, .99);
             scaleTriangle(Ys, 1.01);
             setTrianglePoints(C,  -60, 200, -100, 0, 50, 115.4);
             setTrianglePoints(C,  -60, 200, -100, 0, 50, 115.4);
-            scaleTriangle(C, .98);
+            scaleTriangle(C, .99);
             scaleTriangle(Cs, 1.01);
             setTrianglePoints(M,  50, 115.4, 200, 0, 160, 200);
             setTrianglePoints(Ms,  50, 115.4, 200, 0, 160, 200);
-            scaleTriangle(M, .98);
+            scaleTriangle(M, .99);
             scaleTriangle(Ms, 1.01);
             break;
         case "cyan":
@@ -69,11 +73,11 @@ function transitions(page){
             scaleTriangle(Ys, 1.01);
             setTrianglePoints(C,  -60, 200, 0, -115.4, 200, 0);
             setTrianglePoints(Cs, -60, 200, 0, -115.4, 200, 0);
-            scaleTriangle(C, .98);
+            scaleTriangle(C, .99);
             scaleTriangle(Cs, 1.01);
             setTrianglePoints(M,  50, 115.4, 200, 0, 160, 200);
             setTrianglePoints(Ms, 50, 115.4, 200, 0, 160, 200);
-            scaleTriangle(M, .98);
+            scaleTriangle(M, .99);
             scaleTriangle(Ms, 1.01);
             break;
         case "magenta":
@@ -93,6 +97,8 @@ function transitions(page){
             scaleTriangle(Cs, 1.01);
             setTrianglePoints(M,  -100, 0, 200, -100, 160, 200);
             setTrianglePoints(Ms, -100, 0, 200, -100, 160, 200);
+            scaleTriangle(M, .98);
+            scaleTriangle(Ms, 1.01);
             break;
     }
     update();
