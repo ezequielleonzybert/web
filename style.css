@@ -10,6 +10,7 @@ body {
 
 #frame {
     background-color: black;
+    transition: clip-path 0s;
 }
 
 .polygon {

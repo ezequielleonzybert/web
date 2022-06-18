@@ -1,7 +1,8 @@
 let frame = document.getElementById('frame');
+let polygons = document.getElementsByClassName('polygon');
 let page = null, previous_page = null;
-const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+let vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
 
 //triangles
 let Y = {p1:{}, p2:{}, p3:{}};
@@ -15,6 +16,12 @@ window.onload = ()=>{
     transitions(page);
 }
 
+addEventListener("resize",(e)=>{
+    vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    update();
+})
+
 addEventListener("click", (e)=>{
     previous_page = page;
     page = e.target.id;
@@ -27,7 +34,7 @@ function transitions(page){
                 cyan.style.zIndex = 0;
                 cyan_stroke.style.zIndex = 0;
                 magenta.style.zIndex = -1;
-                magenta_stroke.style.zIndex = -1;      
+                magenta_stroke.style.zIndex = -1;    
             
             setTrianglePoints(Y, -100, -60, 200, -100, 65, 30);
             setTrianglePoints(Ys, -100, -60, 200, -100, 65, 30);
