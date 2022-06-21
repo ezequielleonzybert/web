@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('https://raw.githubusercontent.com/ezequielleonzybert/web/master/typography/futura_extra_black.ttf') format('truetype');
+    src: url('typography/futura_extra_black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#newfont{
+    font-family: 'Futura';
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +33,10 @@ body {
 }
 #yellow{
    background-image: linear-gradient(rgb(255, 251, 0) 0%,rgb(235, 125, 0) 75%);
+   font-family: 'Futura';
+}
+#yellow h2{
+    justify-content: right;
 }
 #yellow_stroke {
     background-color: black;
