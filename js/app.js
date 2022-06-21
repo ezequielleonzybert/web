@@ -25,6 +25,9 @@ function transitions(page){
             Cs = new Triangle(-100,200,-100,-90,50.7,100);
             M = new Triangle(44.5,92.2,200,30,130,200);
             Ms = new Triangle(44.5,92.2,200,30,130,200);
+            about.style.margin = "10% 30%";
+            about.style.fontSize = "1.7em";
+            about.style.color = "black";
             break;
         case "yellow":
             cyan.style.zIndex = 0;
@@ -37,6 +40,9 @@ function transitions(page){
             Cs = new Triangle(-60,200,-100,0,50,115.4);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
+            about.style.margin = "10% 70% 0 0";
+            //about.style.fontSize = "2em";
+            about.style.color = "white";
             break;
         case "cyan":
             if(previous_page == "magenta"){
@@ -51,7 +57,7 @@ function transitions(page){
             Cs = new Triangle(-60,200,0,-115.4,200,0);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
-            
+            about.style.color = "black";            
             break;
         case "magenta":
             if(previous_page == "cyan"){
@@ -66,6 +72,7 @@ function transitions(page){
             Cs = new Triangle(-60,200,-100,0,50,115.4);
             M = new Triangle(-100,0,200,-100,160,200);
             Ms = new Triangle(-100,0,200,-100,160,200);
+            about.style.color = "black";
             break;
     }
     Y.uniformScale(-1);

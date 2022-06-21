@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Futura';
-    src: url('https://raw.githubusercontent.com/ezequielleonzybert/web/master/typography/futura_extra_black.ttf') format('truetype');
+    src: url('https://raw.githubusercontent.com/ezequielleonzybert/web/master/typography/futura_bold_italic.ttf') format('truetype');
     src: url('typography/futura_bold_italic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
@@ -32,16 +32,16 @@ body {
     transition: clip-path 1s, background-position 1s;
 }
 #yellow{
-   cursor: pointer;
    background-image: linear-gradient(rgb(255, 251, 0) 0%,rgb(235, 125, 0) 75%);
-   
+}
+#yellow:hover {
+    color: white;
 }
 #yellow h2{
     font-family: 'Futura';
-    font-size: 1.7em;
-    margin: 9% 30%;
     display: flex;
     justify-content: right;
+    transition: margin 1s, font-size 1s;
 }
 #yellow_stroke {
     background-color: black;
