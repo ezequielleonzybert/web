@@ -1,36 +1,3 @@
-// function setTrianglePoints(triangle, p1x, p1y, p2x, p2y, p3x, p3y){
-//     triangle.p1.x = p1x;
-//     triangle.p1.y = p1y;
-//     triangle.p2.x = p2x;
-//     triangle.p2.y = p2y;
-//     triangle.p3.x = p3x;
-//     triangle.p3.y = p3y;
-// }
-// function translatePolygon(triangle, x, y){
-//     for(const p of Object.values(triangle)){
-//         p.x += x;
-//         p.y += y;
-//     }
-// }
-// function triangleCenter(triangle){
-//     const x = (triangle.p1.x + triangle.p2.x + triangle.p3.x) / 3;
-//     const y = (triangle.p1.y + triangle.p2.y + triangle.p3.y) / 3;
-//     return {x:x, y:y};
-// }
-// function scaleTriangle(triangle, factor){
-//     const center = triangleCenter(triangle);
-
-//     translatePolygon(triangle, -center.x, -center.y);
-
-//     triangle.p1.x *= factor;
-//     triangle.p1.y *= factor;
-//     triangle.p2.x *= factor;
-//     triangle.p2.y *= factor;
-//     triangle.p3.x *= factor;
-//     triangle.p3.y *= factor;
-
-//     translatePolygon(triangle, center.x, center.y);
-//  }
 function whichTransitionEvent(){
     var t;
     var el = document.createElement('fakeelement');
@@ -55,8 +22,39 @@ function getUnit(v){
     return {x: v.x/mag, y: v.y/mag};
 }
 function getNormal(v){
-    const aux = v.y;
-    v.y = -v.x;
-    v.x = aux;
-    return {x: v.x, y: v.y};
+    return {x: v.y, y: -v.x};
 }
+function dist(v){
+    return Math.sqrt(v.x**2 + v.y**2);
+}
+function linesIntersection(l1, l2) {
+    let
+        x1 = l1.p1.x,
+        y1 = l1.p1.y,
+        x2 = l1.p2.x,
+        y2 = l1.p2.y,
+        x3 = l2.p1.x,
+        y3 = l2.p1.y,
+        x4 = l2.p2.x,
+        y4 = l2.p2.y;
+
+    // Check if none of the lines are of length 0
+      if ((x1 === x2 && y1 === y2) || (x3 === x4 && y3 === y4)) {
+          return false
+      }
+  
+      denominator = ((y4 - y3) * (x2 - x1) - (x4 - x3) * (y2 - y1))
+  
+    // Lines are parallel
+      if (denominator === 0) {
+          return false
+      }
+  
+      let ua = ((x4 - x3) * (y1 - y3) - (y4 - y3) * (x1 - x3)) / denominator
+      let ub = ((x2 - x1) * (y1 - y3) - (y2 - y1) * (x1 - x3)) / denominator
+  
+    // Return a object with the x and y coordinates of the intersection
+      let x = x1 + ua * (x2 - x1)
+      let y = y1 + ua * (y2 - y1)
+      return {x, y}
+  }

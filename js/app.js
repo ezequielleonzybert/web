@@ -27,10 +27,10 @@ function transitions(page){
             Ms = new Triangle(44.5,92.2,200,30,130,200);
             break;
         case "yellow":
-            magenta.style.zIndex = 0;
-            magenta_stroke.style.zIndex = 0;
-            cyan.style.zIndex = -1;
-            cyan_stroke.style.zIndex = -1;
+            cyan.style.zIndex = 0;
+            cyan_stroke.style.zIndex = 0;
+            magenta.style.zIndex = -1;
+            magenta_stroke.style.zIndex = -1;
             Y = new Triangle(-100,0,200,0,50,115.4);
             Ys = new Triangle(-100,0,200,0,50,115.4);
             C = new Triangle(-60,200,-100,0,50,115.4);
@@ -67,12 +67,12 @@ function transitions(page){
             Ms = new Triangle(-100,0,200,-100,160,200);
             break;
     }
-    Y.scale(.99);
-    Ys.scale(1.01);
-    C.scale(.99);
-    Cs.scale(1.01);
-    M.scale(.99);
-    Ms.scale(1.01);
+    Y.uniformScale(-1);
+    Ys.uniformScale(1);
+    C.uniformScale(-1);
+    Cs.uniformScale(1);
+    M.uniformScale(-1);
+    Ms.uniformScale(1);
     update();
 }
 
