@@ -51,6 +51,7 @@ function transitions(page){
             Cs = new Triangle(-60,200,0,-115.4,200,0);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
+            
             break;
         case "magenta":
             if(previous_page == "cyan"){
