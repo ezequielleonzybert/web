@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Futura';
     src: url('https://raw.githubusercontent.com/ezequielleonzybert/web/master/typography/futura_extra_black.ttf') format('truetype');
-    src: url('typography/futura_bold.ttf') format('truetype');
+    src: url('typography/futura_bold_italic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
