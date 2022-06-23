@@ -23,7 +23,7 @@ function update(resize){
         resize? 
             title.style.transition = "0s" :
             title.style.transition = "1s";
-    }
+    } console.log(title.style.transition);
     switch (page) {
         default:
             cyan.style.zIndex = 0;
