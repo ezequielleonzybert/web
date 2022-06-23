@@ -1,4 +1,3 @@
-document.documentElement.requestFullscreen({ navigationUI: 'hide' });
 let frame = document.getElementById('frame');
 let polygons = document.getElementsByClassName('polygon');
 let titles = document.getElementsByClassName('title');
@@ -135,29 +134,29 @@ function update(resize){
     Ms.uniformScale(1);
     //triangles
     yellow.style.clipPath = `polygon(
-        ${Y.points[0].x}% ${Y.points[0].y}%,
-        ${Y.points[1].x}% ${Y.points[1].y}%, 
-        ${Y.points[2].x}% ${Y.points[2].y}%)`;
+        ${Y.points[0].x}vw ${Y.points[0].y}vh,
+        ${Y.points[1].x}vw ${Y.points[1].y}vh, 
+        ${Y.points[2].x}vw ${Y.points[2].y}vh)`;
     yellow_stroke.style.clipPath = `polygon(
-        ${Ys.points[0].x}% ${Ys.points[0].y}%,
-        ${Ys.points[1].x}% ${Ys.points[1].y}%, 
-        ${Ys.points[2].x}% ${Ys.points[2].y}%)`;
+        ${Ys.points[0].x}vw ${Ys.points[0].y}vh,
+        ${Ys.points[1].x}vw ${Ys.points[1].y}vh, 
+        ${Ys.points[2].x}vw ${Ys.points[2].y}vh)`;
     cyan.style.clipPath = `polygon(
-        ${C.points[0].x}% ${C.points[0].y}%,
-        ${C.points[1].x}% ${C.points[1].y}%,
-        ${C.points[2].x}% ${C.points[2].y}%)`; 
+        ${C.points[0].x}vw ${C.points[0].y}vh,
+        ${C.points[1].x}vw ${C.points[1].y}vh,
+        ${C.points[2].x}vw ${C.points[2].y}vh)`; 
     cyan_stroke.style.clipPath = `polygon(
-        ${Cs.points[0].x}% ${Cs.points[0].y}%,
-        ${Cs.points[1].x}% ${Cs.points[1].y}%,
-        ${Cs.points[2].x}% ${Cs.points[2].y}%)`; 
+        ${Cs.points[0].x}vw ${Cs.points[0].y}vh,
+        ${Cs.points[1].x}vw ${Cs.points[1].y}vh,
+        ${Cs.points[2].x}vw ${Cs.points[2].y}vh)`; 
     magenta.style.clipPath = `polygon(
-        ${M.points[0].x}% ${M.points[0].y}%,
-        ${M.points[1].x}% ${M.points[1].y}%,
-        ${M.points[2].x}% ${M.points[2].y}%)`;
+        ${M.points[0].x}vw ${M.points[0].y}vh,
+        ${M.points[1].x}vw ${M.points[1].y}vh,
+        ${M.points[2].x}vw ${M.points[2].y}vh)`;
     magenta_stroke.style.clipPath = `polygon(
-        ${Ms.points[0].x}% ${Ms.points[0].y}%,
-        ${Ms.points[1].x}% ${Ms.points[1].y}%,
-        ${Ms.points[2].x}% ${Ms.points[2].y}%)`;
+        ${Ms.points[0].x}vw ${Ms.points[0].y}vh,
+        ${Ms.points[1].x}vw ${Ms.points[1].y}vh,
+        ${Ms.points[2].x}vw ${Ms.points[2].y}vh)`;
 
     //frame
     size = vh * .015;
