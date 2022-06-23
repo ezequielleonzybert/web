@@ -30,41 +30,20 @@ body {
     width: 100vw;
     height: 100vh;
     transition: clip-path 1s, background-position 1s;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.polygon:focus{
-    outline: none;
 }
 #yellow{
-    cursor: pointer;
-    background-image: linear-gradient(rgb(255, 251, 0) 0%,rgb(235, 125, 0) 75%);
+   background-image: linear-gradient(rgb(255, 251, 0) 0%,rgb(235, 125, 0) 75%);
 }
 #yellow:hover {
     color: white;
 }
 .title{
-    font-size: 5.5vw;
     font-family: 'Futura';
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: margin 1s, font-size 1s;
 }
-
-#about {
-    margin: 10vh 0 0 52vw;
-}
-#portfolio {
-    margin: 89vh 0 0 6vw
-}
-#contact {
-    margin: 90vh 0 0 67vw;
-}
-
 #yellow_stroke {
     background-color: black;
 }
