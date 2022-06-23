@@ -167,8 +167,8 @@ function update(resize){
     }
 
 addEventListener("resize",(e)=>{
-    vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
-    vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+    vw = Math.max(document.documentElement.clientWidth);
+    vh = Math.max(document.documentElement.clientHeight);
     update(e.isTrusted);
 })
 
