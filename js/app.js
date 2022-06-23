@@ -18,6 +18,7 @@ function transitions(page){
 }
 
 function update(resize){
+    let size = map(vw, 400,1000,1.3,2.2);
     for(title of titles){
         resize? 
             title.style.transition = "0s" :
@@ -37,17 +38,13 @@ function update(resize){
             Ms = new Triangle(44.5,92.2,200,30,130,200);
 
             //titles
-            const size = map(vw, 400,1000,1.3,2.2);
-            //let x = map(vw, 400,1000,65,65);
-            about.style.margin = `10vh 0 0 25vw`;
+            about.style.margin = `10vh 0 0 57vw`;
             about.style.fontSize = `${size}em`;
             about.style.color = "black";
-            //x = map(vw, 400,1000,79,80); console.log(vw);
-            portfolio.style.margin = `83vh 63vw 0 0`;
+            portfolio.style.margin = `83vh 0 0 7vw`;
             portfolio.style.fontSize = `${size}em`;
             portfolio.style.color = "black";
-            //x = map(vw, 400,1000,25,30);
-            contact.style.margin = `90vh 0 0 55vw`;
+            contact.style.margin = `87vh 0 0 70vw`;
             contact.style.fontSize = `${size}em`;
             contact.style.color = "black";
 
@@ -63,9 +60,17 @@ function update(resize){
             Cs = new Triangle(-60,200,-100,0,50,115.4);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
-            about.style.margin = "10vh 70vw 0 0";
-            about.style.fontSize = "2em";
-            about.style.color = "white";
+            
+            //titles
+            about.style.margin = `10vh 0 0 10vw`;
+            about.style.fontSize = `${size*1.2}em`;
+            about.style.color = "black";
+            portfolio.style.margin = `92vh 0 0 3.5vw`;
+            portfolio.style.fontSize = `${size/1.75}em`;
+            portfolio.style.color = "black";
+            contact.style.margin = `92vh 0 0 86vw`;
+            contact.style.fontSize = `${size/1.75}em`;
+            contact.style.color = "black";
             break;
         case "cyan":
             if(previous_page == "magenta"){
@@ -80,9 +85,16 @@ function update(resize){
             Cs = new Triangle(-60,200,0,-115.4,200,0);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
-            about.style.margin = "6vh 7vw 0 0";
-            about.style.fontSize = "1.4em";
-            about.style.color = "black";          
+            //titles
+            about.style.margin = `7vh 0 0 85vw`;
+            about.style.fontSize = `${size/1.75}em`;
+            about.style.color = "black";
+            portfolio.style.margin = `10vh 0 0 10vw`;
+            portfolio.style.fontSize = `${size*1.2}em`;
+            portfolio.style.color = "black";
+            contact.style.margin = `92vh 0 0 86vw`;
+            contact.style.fontSize = `${size/1.75}em`;
+            contact.style.color = "black";       
             break;
         case "magenta":
             if(previous_page == "cyan"){
@@ -97,7 +109,16 @@ function update(resize){
             Cs = new Triangle(-60,200,-100,0,50,115.4);
             M = new Triangle(-100,0,200,-100,160,200);
             Ms = new Triangle(-100,0,200,-100,160,200);
+            //titles
+            about.style.margin = `7vh 0 0 85vw`;
+            about.style.fontSize = `${size/1.75}em`;
             about.style.color = "black";
+            portfolio.style.margin = `92vh 0 0 3.5vw`;
+            portfolio.style.fontSize = `${size/1.75}em`;
+            portfolio.style.color = "black";
+            contact.style.margin = `80vh 0 0 70vw`;
+            contact.style.fontSize = `${size*1.2}em`;
+            contact.style.color = "black";   
             break;
     }
     Y.uniformScale(-1);
