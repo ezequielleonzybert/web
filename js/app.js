@@ -4,8 +4,8 @@ let titles = document.getElementsByClassName('title');
 let page = "", previous_page = "";
 var transitionEnd = whichTransitionEvent();
 let transition_ended = true;
-let vw = window.innerWidth;
-let vh = window.innerHeight;
+let pixw = window.innerWidth;
+let pixh = window.innerHeight;
 
 //triangles
 let Y, Ys, C, Cs, M, Ms;
@@ -158,16 +158,16 @@ function update(resize){
         ${Ms.points[2].x}vw ${Ms.points[2].y}vh)`;
 
     //frame
-    size = vh * .015;
+    size = pixh * .015;
     frame.style.clipPath = 
         `polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 
-        ${size}px 0, ${size}px ${vh-size}px, ${vw-size}px ${vh-size}px, ${vw-size}px ${size}px, 0 ${size}px)`;
+        ${size}px 0, ${size}px ${pixh-size}px, ${pixw-size}px ${pixh-size}px, ${pixw-size}px ${size}px, 0 ${size}px)`;
     
     }
 
 addEventListener("resize",(e)=>{
-    vw = window.innerWidth;
-    vh = window.innerHeight;
+    pixw = window.innerWidth;
+    pixh = window.innerHeight;
     update(e.isTrusted);
 })
 
