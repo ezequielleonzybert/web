@@ -20,10 +20,21 @@ function transitions(page){
 function update(resize){
     let size = map(vw, 400,1000,1.3,2.2);
     for(title of titles){
-        resize? 
-            title.style.transition = "0s" :
+        if(resize){
+            title.style.transition = "0s";
+        }
+        else{
             title.style.transition = "1s";
-    } console.log(title.style.transition);
+        }
+    }
+    // for(polygon of polygons){
+    //     if(resize){ console.log("hola");
+    //         polygon.style.transition = "0s";
+    //     }
+    //     else{
+    //         polygon.style.transition = "1s";
+    //     }
+    // }
     switch (page) {
         default:
             cyan.style.zIndex = 0;
@@ -175,6 +186,17 @@ addEventListener("click", (e)=>{
     if(transition_ended){
         previous_page = page;
         page = e.target.id; 
+        switch(page){
+            case "about":
+                page = "yellow";
+                break;
+            case "portfolio":
+                page = "cyan";
+                break;
+            case "contact":
+                page = "magenta";
+                break;
+        }
         if(page!= "yellow" && page != "cyan" && page != "magenta"){
             page = "";
         }
