@@ -1,3 +1,4 @@
+document.documentElement.requestFullscreen({ navigationUI: 'hide' });
 let frame = document.getElementById('frame');
 let polygons = document.getElementsByClassName('polygon');
 let titles = document.getElementsByClassName('title');
