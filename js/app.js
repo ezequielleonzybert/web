@@ -4,15 +4,14 @@ let titles = document.getElementsByClassName('title');
 let page = "", previous_page = "";
 var transitionEnd = whichTransitionEvent();
 let transition_ended = true;
-let vw , vh;
+let vw = window.innerWidth;
+let vh = window.innerHeight;
+
 //triangles
 let Y, Ys, C, Cs, M, Ms;
 
 window.onload = ()=>{
-    vw = Math.max(document.documentElement.clientWidth );
-    vh = Math.max(document.documentElement.clientHeight );
     transitions(page);
-    
 }
 
 function transitions(page){
@@ -167,8 +166,8 @@ function update(resize){
     }
 
 addEventListener("resize",(e)=>{
-    vw = Math.max(document.documentElement.clientWidth);
-    vh = Math.max(document.documentElement.clientHeight);
+    vw = window.innerWidth;
+    vh = window.innerHeight;
     update(e.isTrusted);
 })
 
