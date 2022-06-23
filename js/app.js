@@ -9,9 +9,9 @@ let vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight
 //triangles
 let Y, Ys, C, Cs, M, Ms;
 
-window.onload = ()=>{
+//window.onload = ()=>{
     transitions(page);
-}
+//}
 
 function transitions(page){
     update(false);
@@ -44,7 +44,7 @@ function update(resize){
             portfolio.style.margin = `83vh 0 0 7vw`;
             portfolio.style.fontSize = `${size}em`;
             portfolio.style.color = "black";
-            contact.style.margin = `87vh 0 0 70vw`;
+            contact.style.margin = `87vh 0 0 72vw`;
             contact.style.fontSize = `${size}em`;
             contact.style.color = "black";
 

@@ -39,12 +39,20 @@ body {
 }
 .title{
     font-family: 'Futura';
-    /*display: flex;*/
-    /*align-items: center;*/
     text-align: left;
-    /*justify-content: center;*/
     transition: margin 1s, font-size 1s;
 }
+
+#about {
+    margin: 10vh 0 0 57vw;
+}
+#portfolio {
+    margin: 83vh 0 0 7vw;
+}
+#contact {
+    margin: 87vh 0 0 72vw;
+}
+
 #yellow_stroke {
     background-color: black;
 }
