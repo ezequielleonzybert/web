@@ -55,13 +55,14 @@ body {
 }
 
 #about {
-    margin: 10vh 0 0 57vw;
+    font-size: 0;
+    margin: 10vh 0 0 52vw;
 }
 #portfolio {
-    margin: 83vh 0 0 7vw;
+    margin: 89vh 0 0 6vw
 }
 #contact {
-    margin: 87vh 0 0 72vw;
+    margin: 90vh 0 0 67vw;
 }
 
 #yellow_stroke {
