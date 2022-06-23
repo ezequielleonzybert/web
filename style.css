@@ -37,10 +37,11 @@ body {
 #yellow:hover {
     color: white;
 }
-#yellow h2{
+.title{
     font-family: 'Futura';
     display: flex;
-    justify-content: right;
+    align-items: center;
+    justify-content: center;
     transition: margin 1s, font-size 1s;
 }
 #yellow_stroke {

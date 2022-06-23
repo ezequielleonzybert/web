@@ -58,3 +58,7 @@ function linesIntersection(l1, l2) {
       let y = y1 + ua * (y2 - y1)
       return {x, y}
   }
+
+function map(value, low1, high1, low2, high2) {
+    return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}

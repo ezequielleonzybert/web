@@ -1,5 +1,6 @@
 let frame = document.getElementById('frame');
 let polygons = document.getElementsByClassName('polygon');
+let titles = document.getElementsByClassName('title');
 let page = "", previous_page = "";
 var transitionEnd = whichTransitionEvent();
 let transition_ended = true;
@@ -13,6 +14,15 @@ window.onload = ()=>{
 }
 
 function transitions(page){
+    update(false);
+}
+
+function update(resize){
+    for(title of titles){
+        resize? 
+            title.style.transition = "0s" :
+            title.style.transition = "1s";
+    }
     switch (page) {
         default:
             cyan.style.zIndex = 0;
@@ -25,9 +35,22 @@ function transitions(page){
             Cs = new Triangle(-100,200,-100,-90,50.7,100);
             M = new Triangle(44.5,92.2,200,30,130,200);
             Ms = new Triangle(44.5,92.2,200,30,130,200);
-            about.style.margin = "10% 30%";
-            about.style.fontSize = "1.7em";
+
+            //titles
+            const size = map(vw, 400,1000,1.3,2.2);
+            //let x = map(vw, 400,1000,65,65);
+            about.style.margin = `10vh 0 0 25vw`;
+            about.style.fontSize = `${size}em`;
             about.style.color = "black";
+            //x = map(vw, 400,1000,79,80); console.log(vw);
+            portfolio.style.margin = `83vh 63vw 0 0`;
+            portfolio.style.fontSize = `${size}em`;
+            portfolio.style.color = "black";
+            //x = map(vw, 400,1000,25,30);
+            contact.style.margin = `90vh 0 0 55vw`;
+            contact.style.fontSize = `${size}em`;
+            contact.style.color = "black";
+
             break;
         case "yellow":
             cyan.style.zIndex = 0;
@@ -40,8 +63,8 @@ function transitions(page){
             Cs = new Triangle(-60,200,-100,0,50,115.4);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
-            about.style.margin = "10% 70% 0 0";
-            //about.style.fontSize = "2em";
+            about.style.margin = "10vh 70vw 0 0";
+            about.style.fontSize = "2em";
             about.style.color = "white";
             break;
         case "cyan":
@@ -57,7 +80,9 @@ function transitions(page){
             Cs = new Triangle(-60,200,0,-115.4,200,0);
             M = new Triangle(50,115.4,200,0,160,200);
             Ms = new Triangle(50,115.4,200,0,160,200);
-            about.style.color = "black";            
+            about.style.margin = "6vh 7vw 0 0";
+            about.style.fontSize = "1.4em";
+            about.style.color = "black";          
             break;
         case "magenta":
             if(previous_page == "cyan"){
@@ -81,10 +106,6 @@ function transitions(page){
     Cs.uniformScale(1);
     M.uniformScale(-1);
     Ms.uniformScale(1);
-    update();
-}
-
-function update(){
     //triangles
     yellow.style.clipPath = `polygon(
         ${Y.points[0].x}% ${Y.points[0].y}%,
@@ -115,13 +136,14 @@ function update(){
     size = vh * .015;
     frame.style.clipPath = 
         `polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 
-        ${size}px 0, ${size}px ${vh-size}px, ${vw-size}px ${vh-size}px, ${vw-size}px ${size}px, 0 ${size}px)`
-}
+        ${size}px 0, ${size}px ${vh-size}px, ${vw-size}px ${vh-size}px, ${vw-size}px ${size}px, 0 ${size}px)`;
+    
+    }
 
 addEventListener("resize",(e)=>{
     vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
-    update();
+    update(e.isTrusted);
 })
 
 addEventListener(transitionEnd,()=>{
@@ -140,6 +162,4 @@ addEventListener("click", (e)=>{
             transitions(page);
         }
     }
-    
-   
 })
